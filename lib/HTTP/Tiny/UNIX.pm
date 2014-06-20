@@ -125,6 +125,10 @@ pattern will be passed to HTTP::Tiny.
 Proxy is currently not supported.
 
 
+=head1 KNOWN ISSUES
+
+Request to non-Unix URL fails with message: "Cannot parse URL: '80'".
+
 
 =head1 SEE ALSO
 
