@@ -60,9 +60,12 @@ use IO::Socket;
 sub connect {
     my ($self, $scheme, $host, $port, $tiny) = @_;
 
+    # on Unix, we use $host for path and leave port at -1 (unused)
+    my $path = $host;
+
     local($^W) = 0;
     my $sock = IO::Socket::UNIX->new(
-        Peer    => $host,
+        Peer    => $path,
         Type    => SOCK_STREAM,
         Timeout => $self->{timeout},
         Host    => 'localhost',
@@ -70,7 +73,7 @@ sub connect {
 
     unless ($sock) {
         $@ =~ s/^.*?: //;
-        die "Can't open Unix socket $port\: $@";
+        die "Can't open Unix socket $path\: $@";
     }
 
     eval { $sock->blocking(0); };
