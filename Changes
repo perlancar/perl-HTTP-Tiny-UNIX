@@ -1,5 +1,10 @@
 Revision history for HTTP-Tiny-UNIX
 
+0.02    2014-06-25 (SHARYANTO)
+
+        - Fix bug that prevented connecting to TCP.
+
+
 0.01    2014-06-20 (SHARYANTO)
 
         - First release.
