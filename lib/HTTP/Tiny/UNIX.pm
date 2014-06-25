@@ -40,7 +40,7 @@ sub _split_url {
 sub _open_handle {
     my ($self, $request, $scheme, $host, $port) = @_;
 
-    return $self->SUPER::_split_url($request, $scheme, $host, $port)
+    return $self->SUPER::_open_handle($request, $scheme, $host, $port)
         unless $self->{_unix};
 
     my $handle = HTTP::Tiny::Handle::UNIX->new(
@@ -126,11 +126,6 @@ example: C<http:/var/run/apid.sock//api/v1/matches>. URL not matching this
 pattern will be passed to HTTP::Tiny.
 
 Proxy is currently not supported.
-
-
-=head1 KNOWN ISSUES
-
-Request to non-Unix URL fails with message: "Cannot parse URL: '80'".
 
 
 =head1 SEE ALSO
