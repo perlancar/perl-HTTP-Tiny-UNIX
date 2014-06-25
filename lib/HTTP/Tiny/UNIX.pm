@@ -84,6 +84,8 @@ sub connect {
     $self->{host} = $host;
     $self->{port} = $port;
     $self->{_unix} = 1;
+    # this is a hack, we inject this so we can get HTTP::Tiny::UNIX object from
+    # HTTP::Tiny::Handle::UNIX, to get path
     $self->{_tiny} = $tiny;
     $self;
 }
