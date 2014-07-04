@@ -34,7 +34,7 @@ sub _split_url {
     die "Only http scheme is supported\n" unless $scheme eq 'http';
 
     #return ($scheme, $host,      $port, $path_query, $auth);
-    return  ($scheme, $sock_path, -1,    $path_query, undef);
+    return  ($scheme, $sock_path, -1,    $path_query, '');
 }
 
 sub _open_handle {
