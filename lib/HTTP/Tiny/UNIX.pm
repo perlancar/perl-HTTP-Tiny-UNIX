@@ -135,6 +135,6 @@ Proxy is currently not supported.
 L<HTTP::Tiny>
 
 To use L<LWP> to connect over Unix sockets, see
-L<LWP::protocol::http::SocketUnixAlt>.
+L<LWP::Protocol::http::SocketUnixAlt>.
 
 =cut
