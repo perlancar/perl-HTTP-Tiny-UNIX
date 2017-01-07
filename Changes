@@ -1,5 +1,3 @@
-Revision history for HTTP-Tiny-UNIX
-
 0.04    2014-07-04 (SHARYANTO)
 
         - [Bugfix] Set auth to '' instead of undef, to avoid perl undef warning
