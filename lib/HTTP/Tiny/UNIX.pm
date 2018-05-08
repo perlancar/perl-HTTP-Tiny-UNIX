@@ -91,12 +91,12 @@ sub connect {
 }
 
 sub write_request_header {
-    my ($self, $method, $request_uri, $headers) = @_;
+    my ($self, $method, $request_uri, $headers, $header_case) = @_;
 
-    return $self->write_request_header($method, $request_uri, $headers)
+    return $self->SUPER::write_request_header(@_)
         unless $self->{_unix};
 
-    return $self->write_header_lines($headers, "$method $self->{_tiny}{_path_query} HTTP/1.1\x0D\x0A");
+    return $self->write_header_lines($headers, $header_case, "$method $self->{_tiny}{_path_query} HTTP/1.1\x0D\x0A");
 }
 
 1;
