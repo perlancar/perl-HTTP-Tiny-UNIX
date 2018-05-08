@@ -1,3 +1,10 @@
+0.050   2018-05-08 (PERLANCAR)
+
+        - Update to HTTP::Tiny 0.57+ (changed interface of
+          write_request_header() and write_header_lines()). Thanks Moritz
+          Grosch.
+
+
 0.04    2014-07-04 (SHARYANTO)
 
         - [Bugfix] Set auth to '' instead of undef, to avoid perl undef warning
