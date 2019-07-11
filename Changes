@@ -1,4 +1,4 @@
-0.051   2018-05-08 (PERLANCAR)
+0.051   2018-05-08  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -6,20 +6,20 @@
 	  HTTP::Tiny::Handle should not be specified.
 
 
-0.050   2018-05-08 (PERLANCAR)
+0.050   2018-05-08  Released-By: PERLANCAR
 
         - Update to HTTP::Tiny 0.57+ (changed interface of
           write_request_header() and write_header_lines()). Thanks Moritz
           Grosch.
 
 
-0.04    2014-07-04 (SHARYANTO)
+0.04    2014-07-04  Released-By: SHARYANTO
 
         - [Bugfix] Set auth to '' instead of undef, to avoid perl undef warning
           in HTTP::Tiny.
 
 
-0.03    2014-07-04 (SHARYANTO)
+0.03    2014-07-04  Released-By: SHARYANTO
 
         - No functional changes.
 
@@ -27,11 +27,11 @@
           Unix socket (ends up using IO::Socket::INET).
 
 
-0.02    2014-06-25 (SHARYANTO)
+0.02    2014-06-25  Released-By: SHARYANTO
 
         - Fix bug that prevented connecting to TCP.
 
 
-0.01    2014-06-20 (SHARYANTO)
+0.01    2014-06-20  Released-By: SHARYANTO
 
         - First release.
