@@ -38,9 +38,9 @@ sub _split_url {
 }
 
 sub _open_handle {
-    my ($self, $request, $scheme, $host, $port) = @_;
+    my ($self, $request, $scheme, $host, $port, $peer) = @_;
 
-    return $self->SUPER::_open_handle($request, $scheme, $host, $port)
+    return $self->SUPER::_open_handle($request, $scheme, $host, $port, $peer)
         unless $self->{_unix};
 
     my $handle = HTTP::Tiny::Handle::UNIX->new(
@@ -56,6 +56,13 @@ package
 use parent -norequire, 'HTTP::Tiny::Handle';
 
 use IO::Socket;
+
+sub connected {
+    my ($self) = @_;
+     return $self->SUPER::connected(@_)
+         unless $self->{_unix};
+     return;
+}
 
 sub connect {
     my ($self, $scheme, $host, $port, $tiny) = @_;
